@@ -1,0 +1,92 @@
+@import 'bourbon/bourbon';
+
+$logo-font-size: 32px;
+$text-color: white;
+
+#menu {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: $background-color;
+  display: inline;
+  overflow: hidden;
+  height: 47px;
+  @include transform(perspective(1000px) rotateX(0deg));
+  @include transition(0.6s all);
+  @include transform-origin(center top);
+  @include transform-style(preserve-3d);
+
+  #logo, #nav-menu {
+    display: inline-block;
+  }
+
+  &.headroom--unpinned {
+    @include transform(perspective(300px) rotate3D(1,0,0,-90deg));
+  }
+}
+
+
+#nav-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 10px;
+  padding-right: 5px;
+  text-align: right;
+  color: $text-color;
+  text-shadow: 0px 0px $text-color;
+
+  @media screen and (max-width: $break-small) {
+    font-size: 12px;
+  }
+
+  font-family: 'Open Sans Light';
+
+  div {
+    display: inline;
+    margin: 5px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $text-color;
+  }
+}
+
+#logo {
+  padding-top: 5px;
+  padding-left: 10px;
+
+  canvas {
+    float: left
+  }
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: $logo-font-size;
+    position: relative;
+    font-family: 'Exo light';
+    color: white;
+    display: inline;
+
+    @media screen and (max-width: $break-small) {
+      font-size: 20px;
+    }
+
+    .rainbow-word :nth-child(1) {
+      color: $yellow;
+    }
+
+    .rainbow-word :nth-child(2) {
+      color: $red;
+    }
+    .rainbow-word :nth-child(3) {
+      color: $green;
+    }
+    .rainbow-word :nth-child(4) {
+      color: $purple;
+    }
+
+  }
+}

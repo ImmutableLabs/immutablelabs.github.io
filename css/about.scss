@@ -1,0 +1,180 @@
+@import 'bourbon/bourbon';
+
+$white: white;
+$card-height: 42px;
+$front-font-size: 42px;
+$back-font-size: 24px;
+
+
+#about {
+svg * { fill: white; }
+  text-align: center;
+  font-family: pistara;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  background-color: $white;
+}
+
+$columns: 6;
+$gutter: 10px;
+$min-width: 120px;
+
+.boxs {
+  padding-top: $gutter;
+  &:after { 
+    content: ""; 
+    display: table; 
+    clear: both;
+  }
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  box-sizing: border-box;
+  padding-left: $gutter;
+
+  @include perspective(1000);
+
+  .box {
+    height: $card-height;
+    border-right: 10px solid transparent;
+    box-sizing: border-box;
+    width: 30%;
+    float: left;
+    margin-bottom: $gutter;
+  }
+
+
+}
+
+$fudge: 0.0;
+
+$time: cubic-bezier(0.5, 0.9, .8, 1.0);
+
+.card {
+  @include transform-style(preserve-3d);
+  @include transition(0.4s all $time);
+  height: 200px;
+
+  color: white;
+
+  .icon { 
+    width: 40%;
+  }
+  .front {
+    // For flip
+    z-index: 2;
+    
+    // Styles
+    font-size: $front-font-size;
+  }
+
+  .front, .back {
+    // For flip
+    @include backface-visibility(hidden);
+
+    // Syles
+    width: 100%;
+    height: 100%;
+  }
+
+  .back {
+    // For flip
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    // Styles
+    font-size: $back-font-size;
+    text-align: left;
+    padding: 15px;
+    @include box-sizing(border-box);
+
+    p { 
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .back {
+    @include transform(rotateY(180deg));
+  }
+
+}
+
+.compatibility {
+  .front, .back {
+    background-color: $yellow;
+  }
+}
+
+.innovation {
+  .front, .back {
+    background-color: $green;
+  }
+}
+
+.usability {
+  .front, .back {
+    background-color: $purple;
+  }
+}
+
+
+.flipped {
+  .card {
+    @include transform(rotateY(180deg));
+  }
+}
+
+.box.width2 {
+  width: $min-width * 2 + (2 * $gutter);
+}
+
+.box.width3 {
+  width: $min-width * 3 + (3 * $gutter);
+}
+
+.blue {
+  background-color: blue;
+  height: 120px;
+}
+
+.green {
+  background-color: green;
+  height: 120px;
+}
+.red {
+  background-color: red;
+  height: 120px;
+}
+
+
+$temperature-card-size: 120px;
+
+.temperature-card  {
+  text-align: center;
+  color: white;
+  background-color: teal;
+  height: $temperature-card-size;
+  width: 120px;
+  padding-top: 10px;
+  box-sizing: border-box;
+
+  h4 {
+    font-weight: normal;
+  margin: 0; padding: 0; }
+}
+
+
+.temp {
+  vertical-align: middle;
+  line-height: $temperature-card-size;
+  font-size: 24px;
+
+  &:after {
+    content:  "\00b0 C";
+  }
+}
