@@ -16,10 +16,16 @@
                         :source-paths ["src/cljs" 
                                        ".lein-git-deps/dommy/src"]
                         :compiler {
-                                   :output-to "index.js"
+                                   :output-to "dev.js"
                                    :output-dir "out/dev"
                                    :optimizations :none
                                    :source-map true}}
+                       {:id "production"
+                        :source-paths ["src/cljs"]
+                        :compiler {
+                                   :output-to "production.js"
+                                   :externs [ "src/js/lib/headroom.js"]
+                                   :optimizations :advanced}}
 
                        {:id "test"
                         :source-paths ["src/cljs" "test/cljs"]

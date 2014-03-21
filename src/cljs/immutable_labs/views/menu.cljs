@@ -23,35 +23,10 @@
         (doseq [face [(* i 2) (+ (* i 2) 1)]]
           (-> faces (aget face) .-color (.setHex color)))))))
 
-(defn logo-renderer [width height colors]
-  (let [renderer (js/THREE.WebGLRenderer. (js-obj "antialias" true 
-                                                  "alpha" true))
-        scene (js/THREE.Scene.)
-        camera (js/THREE.PerspectiveCamera. 45 (/ width height) 0.41 0)]
-    (.setSize renderer width height)
-    (let [geometry (js/THREE.CubeGeometry. 2 2 2)
-          material (js/THREE.MeshBasicMaterial.
-                     (js-obj "color" 0xffffff 
-                             "vertexColors" (.-FaceColors js/THREE)))
-          cube (js/THREE.Mesh. geometry material)]
-
-      (rotate! cube 1.04 0.35)
-      (.add scene cube)
-      (color-cube! cube colors)
-      (set! (.-z (.-position camera)) 5)
-      (.render renderer scene camera)
-      (def anim (fn [] 
-                  (inc-rotate! cube 0.01 0.02)
-                  (js/requestAnimationFrame anim)
-                  (.render renderer scene camera)))
-      {:renderer renderer
-       :cube cube})))
-
 (deftemplate logo [colors]
-  (let [zip #(map vector % %2)
-        renderer (logo-renderer 35 35 colors)]
+  (let [zip #(map vector % %2)]
     [:#logo 
-     (.-domElement (:renderer renderer))
+     "hey"
      [:h1 "Immutable" " " 
       [:span.rainbow-word (for [[letter] "Labs" ]
                             [:span letter])]] ]))
