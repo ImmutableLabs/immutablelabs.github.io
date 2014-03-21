@@ -1,11 +1,9 @@
 (defproject immutable-labs "0.1.0-SNAPSHOT"
-  :description "FIXME: write this!"
-  :url "http://example.com/FIXME"
+  :description "Landing page for Immutable Labs"
+  :url "http://immutablelabs.com"
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [org.clojure/core.async "0.1.267.0-0d7780-alpha"]
-                 [org.clojure/core.async "0.1.267.0-0d7780-alpha"]
                  [org.clojure/clojurescript "0.0-2173"]]
-  
 
   :plugins [[lein-cljsbuild "1.0.0-alpha2"]
             [lein-git-deps "0.0.1-SNAPSHOT"]]
