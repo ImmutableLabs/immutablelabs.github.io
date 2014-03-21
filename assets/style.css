@@ -1,25 +1,267 @@
-/*
-Errno::ENOENT: No such file or directory - css/assets/main.scss
+body, div {
+  margin: 0;
+  padding: 0; }
 
-Backtrace:
-/home/nicholas/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.0.rc.1/lib/sass/plugin/compiler.rb:341:in `read'
-/home/nicholas/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.0.rc.1/lib/sass/plugin/compiler.rb:341:in `update_stylesheet'
-/home/nicholas/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.0.rc.1/lib/sass/plugin/compiler.rb:192:in `block in update_stylesheets'
-/home/nicholas/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.0.rc.1/lib/sass/plugin/compiler.rb:189:in `each'
-/home/nicholas/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.0.rc.1/lib/sass/plugin/compiler.rb:189:in `update_stylesheets'
-/home/nicholas/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.0.rc.1/lib/sass/plugin/compiler.rb:224:in `watch'
-/home/nicholas/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.0.rc.1/lib/sass/plugin.rb:109:in `method_missing'
-/home/nicholas/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.0.rc.1/lib/sass/exec.rb:508:in `watch_or_update'
-/home/nicholas/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.0.rc.1/lib/sass/exec.rb:346:in `process_result'
-/home/nicholas/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.0.rc.1/lib/sass/exec.rb:43:in `parse'
-/home/nicholas/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.0.rc.1/lib/sass/exec.rb:22:in `parse!'
-/home/nicholas/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.0.rc.1/bin/sass:9:in `<top (required)>'
-/home/nicholas/.rvm/gems/ruby-2.0.0-p247/bin/sass:23:in `load'
-/home/nicholas/.rvm/gems/ruby-2.0.0-p247/bin/sass:23:in `<main>'
-/home/nicholas/.rvm/gems/ruby-2.0.0-p247/bin/ruby_executable_hooks:15:in `eval'
-/home/nicholas/.rvm/gems/ruby-2.0.0-p247/bin/ruby_executable_hooks:15:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Errno::ENOENT: No such file or directory - css/assets/main.scss"; }
+h1, h2, h3, h4 {
+  padding: 0;
+  margin: 0; }
+
+#intro {
+  top: 47px;
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  box-sizing: border-box;
+  display: table; }
+  #intro h1 {
+    font-weight: normal;
+    font-family: 'Open Sans Light';
+    font-size: 24px;
+    margin: 0;
+    margin-top: 200px;
+    padding: 0;
+    position: relative;
+    color: white; }
+    @media screen and (max-width: 500px) {
+      #intro h1 {
+        font-size: 16px; } }
+  #intro #background {
+    height: 494px;
+    position: fixed;
+    width: 100%; }
+
+@font-face {
+  font-family: 'Exo Light';
+  src: url("./css/fonts/Exo-Thin.otf"); }
+@font-face {
+  font-family: 'Expansiva';
+  src: url("./css/fonts/iArnold_font.ttf"); }
+@font-face {
+  font-family: 'Pistara';
+  src: url("./css/fonts/Pistara.otf"); }
+@font-face {
+  font-family: 'Poetsen';
+  src: url("./css/fonts/PoetsenOne-Regular.ttf"); }
+@font-face {
+  font-family: 'Arvo';
+  src: url("./css/fonts/Arvo-Bold.ttf"); }
+@font-face {
+  font-family: 'Lato';
+  src: url("./css/fonts/Lato-Reg.ttf"); }
+@font-face {
+  font-family: 'Open Sans';
+  src: url("./css/fonts/OpenSans-Regular.ttf"); }
+@font-face {
+  font-family: 'Open Sans Light';
+  src: url("./css/fonts/OpenSans-Light.ttf"); }
+@font-face {
+  font-family: 'Lato';
+  src: url("./css/fonts/Lato-Bol.ttf");
+  font-weight: bold; }
+#about {
+  text-align: center;
+  font-family: pistara;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  background-color: white; }
+  #about svg * {
+    fill: white; }
+
+.boxs {
+  padding-top: 10px;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  box-sizing: border-box;
+  padding-left: 10px;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  perspective: 1000; }
+  .boxs:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .boxs .box {
+    border-right: 10px solid transparent;
+    box-sizing: border-box;
+    width: 30%;
+    float: left;
+    margin-bottom: 10px; }
+
+.card {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: 0.4s all cubic-bezier(0.5, 0.9, 0.8, 1);
+  -moz-transition: 0.4s all cubic-bezier(0.5, 0.9, 0.8, 1);
+  transition: 0.4s all cubic-bezier(0.5, 0.9, 0.8, 1);
+  height: 200px;
+  color: white; }
+  .card .icon {
+    width: 40%; }
+  .card .front {
+    z-index: 2;
+    font-size: 42px; }
+  .card .front, .card .back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%; }
+  .card .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    font-size: 24px;
+    text-align: left;
+    padding: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .card .back p {
+      padding: 0;
+      margin: 0; }
+  .card .back {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
+
+.compatibility .front, .compatibility .back {
+  background-color: #f1d60f; }
+
+.innovation .front, .innovation .back {
+  background-color: #2ecc71; }
+
+.usability .front, .usability .back {
+  background-color: #8c35cf; }
+
+.flipped .card {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg); }
+
+.box.width2 {
+  width: 260px; }
+
+.box.width3 {
+  width: 390px; }
+
+.blue {
+  background-color: blue;
+  height: 120px; }
+
+.green {
+  background-color: green;
+  height: 120px; }
+
+.red {
+  background-color: red;
+  height: 120px; }
+
+.temperature-card {
+  text-align: center;
+  color: white;
+  background-color: teal;
+  height: 120px;
+  width: 120px;
+  padding-top: 10px;
+  box-sizing: border-box; }
+  .temperature-card h4 {
+    font-weight: normal;
+    margin: 0;
+    padding: 0; }
+
+.temp {
+  vertical-align: middle;
+  line-height: 120px;
+  font-size: 24px; }
+  .temp:after {
+    content: "\00b0 C"; }
+
+#menu {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: #333333;
+  display: inline;
+  overflow: hidden;
+  height: 47px;
+  -webkit-transform: perspective(1000px) rotateX(0deg);
+  -moz-transform: perspective(1000px) rotateX(0deg);
+  -ms-transform: perspective(1000px) rotateX(0deg);
+  -o-transform: perspective(1000px) rotateX(0deg);
+  transform: perspective(1000px) rotateX(0deg);
+  -webkit-transition: 0.6s all;
+  -moz-transition: 0.6s all;
+  transition: 0.6s all;
+  -webkit-transform-origin: center top;
+  -moz-transform-origin: center top;
+  -ms-transform-origin: center top;
+  -o-transform-origin: center top;
+  transform-origin: center top;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+  #menu #logo, #menu #nav-menu {
+    display: inline-block; }
+  #menu.headroom--unpinned {
+    -webkit-transform: perspective(300px) rotate3D(1, 0, 0, -90deg);
+    -moz-transform: perspective(300px) rotate3D(1, 0, 0, -90deg);
+    -ms-transform: perspective(300px) rotate3D(1, 0, 0, -90deg);
+    -o-transform: perspective(300px) rotate3D(1, 0, 0, -90deg);
+    transform: perspective(300px) rotate3D(1, 0, 0, -90deg); }
+
+#nav-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 10px;
+  padding-right: 5px;
+  text-align: right;
+  color: white;
+  text-shadow: 0px 0px white;
+  font-family: 'Open Sans Light'; }
+  @media screen and (max-width: 500px) {
+    #nav-menu {
+      font-size: 12px; } }
+  #nav-menu div {
+    display: inline;
+    margin: 5px; }
+  #nav-menu a {
+    text-decoration: none;
+    color: white; }
+
+#logo {
+  padding-top: 5px;
+  padding-left: 10px; }
+  #logo canvas {
+    float: left; }
+  #logo h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+    position: relative;
+    font-family: 'Exo light';
+    color: white;
+    display: inline; }
+    @media screen and (max-width: 500px) {
+      #logo h1 {
+        font-size: 20px; } }
+    #logo h1 .rainbow-word :nth-child(1) {
+      color: #f1d60f; }
+    #logo h1 .rainbow-word :nth-child(2) {
+      color: #df3f2f; }
+    #logo h1 .rainbow-word :nth-child(3) {
+      color: #2ecc71; }
+    #logo h1 .rainbow-word :nth-child(4) {
+      color: #8c35cf; }
