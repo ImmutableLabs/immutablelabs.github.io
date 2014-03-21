@@ -1,9 +1,9 @@
 @import 'bourbon/bourbon';
 
 $white: white;
-$card-height: 42px;
 $front-font-size: 42px;
 $back-font-size: 24px;
+$card-height: 200px;
 
 
 #about {
@@ -37,7 +37,6 @@ $min-width: 120px;
   @include perspective(1000);
 
   .box {
-    height: $card-height;
     border-right: 10px solid transparent;
     box-sizing: border-box;
     width: 30%;
@@ -55,7 +54,7 @@ $time: cubic-bezier(0.5, 0.9, .8, 1.0);
 .card {
   @include transform-style(preserve-3d);
   @include transition(0.4s all $time);
-  height: 200px;
+  height: $card-height;
 
   color: white;
 

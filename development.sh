@@ -1,4 +1,4 @@
 #!/usr/bin/bash
 
-sass --watch css/main.scss:style.css &
+sass --watch assets/css/main.scss:assets/style.css &
 lein cljsbuild auto dev
