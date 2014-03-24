@@ -8,27 +8,25 @@ $offset: 47px;
   top: $offset;
   width: 100%;
   height: $height;
-  text-align: center;
   box-sizing: border-box;
   display: table;
+
 
   h1 {
     font-weight: normal;
     font-family: 'Open Sans Light';
     font-size: 24px;
     margin: 0; 
-    margin-top: 200px;
+    top: 200px;
+    position: absolute;
     padding: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+
     @media screen and (max-width: $break-small) {
       font-size: 16px;
     }
-    position: relative;
-    color: white;
   }
 
-  #background { 
-    height: $height + 2 * $offset;
-    position: fixed;
-    width: 100%;
-  }
 }

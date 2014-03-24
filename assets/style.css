@@ -10,7 +10,6 @@ h1, h2, h3, h4 {
   top: 47px;
   width: 100%;
   height: 400px;
-  text-align: center;
   box-sizing: border-box;
   display: table; }
   #intro h1 {
@@ -18,17 +17,15 @@ h1, h2, h3, h4 {
     font-family: 'Open Sans Light';
     font-size: 24px;
     margin: 0;
-    margin-top: 200px;
+    top: 200px;
+    position: absolute;
     padding: 0;
-    position: relative;
+    width: 100%;
+    text-align: center;
     color: white; }
     @media screen and (max-width: 500px) {
       #intro h1 {
         font-size: 16px; } }
-  #intro #background {
-    height: 494px;
-    position: fixed;
-    width: 100%; }
 
 @font-face {
   font-family: 'Exo Light';
@@ -52,22 +49,33 @@ h1, h2, h3, h4 {
   font-family: 'Open Sans';
   src: url("./css/fonts/OpenSans-Regular.ttf"); }
 @font-face {
+  font-family: 'Open Sans';
+  src: url("./css/fonts/OpenSans-Bold.ttf");
+  font-weight: bold; }
+@font-face {
   font-family: 'Open Sans Light';
   src: url("./css/fonts/OpenSans-Light.ttf"); }
 @font-face {
   font-family: 'Lato';
   src: url("./css/fonts/Lato-Bol.ttf");
   font-weight: bold; }
-#about {
+#about .background {
+  box-shadow: 0px -2px 4px rgba(9, 6, 6, 0.56); }
+
+#principles {
+  font-family: 'Open Sans';
   text-align: center;
-  font-family: pistara;
   position: relative;
   height: 100%;
-  width: 100%;
-  margin: auto;
-  background-color: white; }
-  #about svg * {
-    fill: white; }
+  margin: 0 15px 0 15px; }
+  #principles .title {
+    font-size: 42px;
+    font-weight: normal;
+    background-color: #df3f2f;
+    margin: auto;
+    color: white;
+    position: relative;
+    z-index: 2; }
 
 .boxs {
   padding-top: 10px;
@@ -105,7 +113,8 @@ h1, h2, h3, h4 {
     width: 40%; }
   .card .front {
     z-index: 2;
-    font-size: 42px; }
+    font-size: 34px;
+    box-shadow: inset 0px 0px 2px 2px rgba(22, 22, 22, 0.85); }
   .card .front, .card .back {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -116,6 +125,8 @@ h1, h2, h3, h4 {
     top: 0;
     left: 0;
     z-index: 2;
+    font-weight: bold;
+    font-family: pistara;
     font-size: 24px;
     text-align: left;
     padding: 15px;
@@ -166,27 +177,56 @@ h1, h2, h3, h4 {
   background-color: red;
   height: 120px; }
 
-.temperature-card {
+/* Ribbon */
+.ribbon {
+  font-size: 16px !important;
+  /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+  width: 50%;
+  position: relative;
+  background: #ba89b6;
+  color: #fff;
   text-align: center;
-  color: white;
-  background-color: teal;
-  height: 120px;
-  width: 120px;
-  padding-top: 10px;
-  box-sizing: border-box; }
-  .temperature-card h4 {
-    font-weight: normal;
-    margin: 0;
-    padding: 0; }
+  padding: 1em 2em;
+  /* Adjust to suit */
+  margin: 2em auto 3em;
+  /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */ }
 
-.temp {
-  vertical-align: middle;
-  line-height: 120px;
-  font-size: 24px; }
-  .temp:after {
-    content: "\00b0 C"; }
+.ribbon:before, .ribbon:after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -1em;
+  border: 1.5em solid #986794;
+  z-index: -1; }
+
+.ribbon:before {
+  left: -2em;
+  border-right-width: 1.5em;
+  border-left-color: transparent; }
+
+.ribbon:after {
+  right: -2em;
+  border-left-width: 1.5em;
+  border-right-color: transparent; }
+
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-style: solid;
+  border-color: #804f7c transparent transparent transparent;
+  bottom: -1em; }
+
+.ribbon .ribbon-content:before {
+  left: 0;
+  border-width: 1em 0 0 1em; }
+
+.ribbon .ribbon-content:after {
+  right: 0;
+  border-width: 1em 1em 0 0; }
 
 #menu {
+  box-shadow: 0px 2px 4px rgba(9, 6, 6, 0.56);
   position: fixed;
   width: 100%;
   z-index: 100;

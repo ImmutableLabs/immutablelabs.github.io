@@ -1,20 +1,35 @@
 @import 'bourbon/bourbon';
 
 $white: white;
-$front-font-size: 42px;
+$front-font-size: 34px;
 $back-font-size: 24px;
 $card-height: 200px;
+$title-font-size: 42px;
 
+$offset: 15px;
+$size: 45px;
 
 #about {
-svg * { fill: white; }
+  .background {
+    box-shadow: 0px -2px 4px rgba(9,6,6,0.56);
+  }
+}
+
+#principles {
+  font-family: 'Open Sans';
   text-align: center;
-  font-family: pistara;
   position: relative;
   height: 100%;
-  width: 100%;
-  margin: auto;
-  background-color: $white;
+  margin: 0 15px 0 15px;
+  .title {
+    font-size: $title-font-size;
+    font-weight: normal;
+    background-color: $red;
+    margin: auto;
+    color: white;
+    position: relative;
+    z-index: 2;
+  }
 }
 
 $columns: 6;
@@ -67,6 +82,7 @@ $time: cubic-bezier(0.5, 0.9, .8, 1.0);
     
     // Styles
     font-size: $front-font-size;
+    box-shadow: inset 0px 0px 2px 2px rgba(22,22,22,0.85);
   }
 
   .front, .back {
@@ -84,8 +100,10 @@ $time: cubic-bezier(0.5, 0.9, .8, 1.0);
     top: 0;
     left: 0;
     z-index: 2;
+    font-weight: bold;
 
     // Styles
+    font-family: pistara;
     font-size: $back-font-size;
     text-align: left;
     padding: 15px;
@@ -151,29 +169,51 @@ $time: cubic-bezier(0.5, 0.9, .8, 1.0);
 }
 
 
-$temperature-card-size: 120px;
+/* Ribbon */
+.ribbon {
+ font-size: 16px !important;
+ /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
 
-.temperature-card  {
-  text-align: center;
-  color: white;
-  background-color: teal;
-  height: $temperature-card-size;
-  width: 120px;
-  padding-top: 10px;
-  box-sizing: border-box;
-
-  h4 {
-    font-weight: normal;
-  margin: 0; padding: 0; }
+ width: 50%;
+    
+ position: relative;
+ background: #ba89b6;
+ color: #fff;
+ text-align: center;
+ padding: 1em 2em; /* Adjust to suit */
+ margin: 2em auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
 }
-
-
-.temp {
-  vertical-align: middle;
-  line-height: $temperature-card-size;
-  font-size: 24px;
-
-  &:after {
-    content:  "\00b0 C";
-  }
+.ribbon:before, .ribbon:after {
+ content: "";
+ position: absolute;
+ display: block;
+ bottom: -1em;
+ border: 1.5em solid #986794;
+ z-index: -1;
+}
+.ribbon:before {
+ left: -2em;
+ border-right-width: 1.5em;
+ border-left-color: transparent;
+}
+.ribbon:after {
+ right: -2em;
+ border-left-width: 1.5em;
+ border-right-color: transparent;
+}
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: #804f7c transparent transparent transparent;
+ bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+ left: 0;
+ border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+ right: 0;
+ border-width: 1em 1em 0 0;
 }

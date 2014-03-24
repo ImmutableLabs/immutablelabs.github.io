@@ -6,9 +6,12 @@
                  [org.clojure/clojurescript "0.0-2173"]]
 
   :plugins [[lein-cljsbuild "1.0.0-alpha2"]
+            [lein-exec "0.1"]
             [lein-git-deps "0.0.1-SNAPSHOT"]]
+  
 
   :git-dependencies [["https://github.com/immutablelabs/dommy.git"]]
+
   :source-paths ["src" ".lein-git-deps/dommy/src"]
 
 

@@ -8,5 +8,8 @@
 (defn event-channel [selector event f]
   (let [out (chan)]
     (doseq [ele (sel selector)]
-      (dommy/listen! ele event (fn [e] (put! out (f ele e)))))
+      (dommy/listen! ele event 
+                     (fn [e] 
+                       (.log js/console 3)
+                       (put! out (f ele e)))))
   out))
