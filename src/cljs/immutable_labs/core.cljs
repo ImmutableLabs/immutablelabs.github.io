@@ -14,3 +14,4 @@
   (.init (js/Headroom. e (js-obj "tolerance" 50 "offset" 180))))
 (dommy/append! (sel1 :body) (intro/render))
 (dommy/append! (sel1 :body) (about/render))
+(shim/svg)

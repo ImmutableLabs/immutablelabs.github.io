@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   width="676.0907"
+   height="762.81104"
+   id="svg5694">
+  <defs
+     id="defs5696">
+    <linearGradient
+       id="linearGradient6264">
+      <stop
+         id="stop6274"
+         style="stop-color:#f1d60f;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop6268"
+         style="stop-color:#f1d60f;stop-opacity:0"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient6256">
+      <stop
+         id="stop6258"
+         style="stop-color:#8c35cf;stop-opacity:0"
+         offset="0" />
+      <stop
+         id="stop6260"
+         style="stop-color:#8c35cf;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient6248">
+      <stop
+         id="stop6250"
+         style="stop-color:#05b44f;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop6252"
+         style="stop-color:#05b44f;stop-opacity:0"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       x1="398.91721"
+       y1="609.44879"
+       x2="705.77661"
+       y2="786.61414"
+       id="linearGradient6254"
+       xlink:href="#linearGradient6248"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       x1="30.68594"
+       y1="786.61414"
+       x2="337.54535"
+       y2="609.44879"
+       id="linearGradient6262"
+       xlink:href="#linearGradient6256"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       x1="368.23126"
+       y1="556.29919"
+       x2="368.23126"
+       y2="201.96848"
+       id="linearGradient6270"
+       xlink:href="#linearGradient6264"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="pad" />
+  </defs>
+  <metadata
+     id="metadata5699">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-30.18594,-201.46848)"
+     id="layer1">
+    <path
+       d="m 30.68594,786.61415 306.85939,177.16536 0,-354.33071 L 30.68594,432.28344 z"
+       id="path5710"
+       style="fill:url(#linearGradient6262);fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       d="m 398.91721,609.4488 0,354.33071 306.8594,-177.16536 0,-354.33071 z"
+       id="path5712"
+       style="fill:url(#linearGradient6254);fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       d="M 368.23127,556.29919 61.371879,379.13384 368.23127,201.96848 675.09067,379.13384 z"
+       id="path5714"
+       style="fill:url(#linearGradient6270);fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  </g>
+</svg>
