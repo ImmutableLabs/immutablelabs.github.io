@@ -10,19 +10,21 @@ $offset: 47px;
   height: $height;
   box-sizing: border-box;
   display: table;
-
+  @include background-svg("imgs/rainbow_grid.clj");
 
   h1 {
     font-weight: normal;
     font-family: 'Open Sans Light';
     font-size: 24px;
-    margin: 0; 
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
     top: 200px;
-    position: absolute;
+    position: relative;
     padding: 0;
     width: 100%;
     text-align: center;
-    color: white;
+    color: rgb(26,26,26);
 
     @media screen and (max-width: $break-small) {
       font-size: 16px;

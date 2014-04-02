@@ -1,12 +1,10 @@
 (ns immutable-labs.views.intro
   (:require [dommy.core]
-            [dommy.template ]
-            [immutable-labs.views.patterns :refer [rainbow-grid]])
+            [dommy.template ])
   (:use-macros
     [dommy.macros :only [node deftemplate]]))
 
 
 (deftemplate render []
   [:#intro
-   (rainbow-grid)
-   [:h1 "Creating Online solutions for mobile and the Web."]])
+   [:h1 "We create online solutions for mobile and the web"]])

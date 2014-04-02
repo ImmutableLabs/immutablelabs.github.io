@@ -9,26 +9,48 @@ $title-font-size: 42px;
 $offset: 15px;
 $size: 45px;
 
-#about {
-  .background {
-    box-shadow: 0px -2px 4px rgba(9,6,6,0.56);
-  }
-}
+.back { display: none;}
 
-#principles {
+#about {
+  text-align: left;
+  background-image: url("imgs/metallic.clj.svg");
+  box-shadow: 0px -1px 4px rgba(9,6,6,0.56);
   font-family: 'Open Sans';
-  text-align: center;
   position: relative;
   height: 100%;
-  margin: 0 15px 0 15px;
+  padding: 0;
+  width: 100%;
+  padding-top: 15px;
+
+  .info-card {
+    .title {
+      color: black;
+    }
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05)
+  }
+
   .title {
-    font-size: $title-font-size;
+    text-align: right;
+    font-size: 24px;
     font-weight: normal;
-    background-color: $red;
-    margin: auto;
     color: white;
+    padding: 5px;
+    padding-right: 10px;
+    width: 40%;
+    min-width: 400px;
+
+    @media (max-width: 500px) {
+      text-align: center;
+      width: 100%;
+    }
+    left: 0;
     position: relative;
-    z-index: 2;
+  }
+
+  h4.title {
+    background-color: $red;
   }
 }
 
@@ -48,6 +70,7 @@ $min-width: 120px;
   margin: auto;
   box-sizing: border-box;
   padding-left: $gutter;
+  
 
   @include perspective(1000);
 
@@ -57,8 +80,12 @@ $min-width: 120px;
     width: 30%;
     float: left;
     margin-bottom: $gutter;
-  }
 
+    @media (max-width: 800px) {
+      float: none;
+      margin: 0 auto 10px auto;
+    }
+  }
 
 }
 
@@ -67,7 +94,6 @@ $fudge: 0.0;
 $time: cubic-bezier(0.5, 0.9, .8, 1.0);
 
 .card {
-  @include transform-style(preserve-3d);
   @include transition(0.4s all $time);
   height: $card-height;
 
@@ -76,74 +102,73 @@ $time: cubic-bezier(0.5, 0.9, .8, 1.0);
   .icon { 
     width: 40%;
   }
-  .front {
-    // For flip
-    z-index: 2;
-    
-    // Styles
+  h4 {
     font-size: $front-font-size;
-    box-shadow: inset 0px 0px 2px 2px rgba(22,22,22,0.85);
   }
+}
 
-  .front, .back {
-    // For flip
-    @include backface-visibility(hidden);
-
-    // Syles
-    width: 100%;
-    height: 100%;
-  }
-
-  .back {
-    // For flip
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    font-weight: bold;
-
-    // Styles
-    font-family: pistara;
-    font-size: $back-font-size;
-    text-align: left;
-    padding: 15px;
-    @include box-sizing(border-box);
-
-    p { 
-      padding: 0;
-      margin: 0;
-    }
-  }
-
-  .back {
-    @include transform(rotateY(180deg));
-  }
-
+.card:hover {
+  text-shadow: 0px 4px black;
+  @include transition(0.4s all $time);
 }
 
 .compatibility {
-  .front, .back {
+  &:hover {
     background-color: $yellow;
   }
 }
 
 .innovation {
-  .front, .back {
+  &:hover {
     background-color: $green;
   }
 }
 
 .usability {
-  .front, .back {
+  &:hover {
     background-color: $purple;
   }
 }
+$picture-size: 400px;
+$pad: 10px;
 
+#who {
+  position: relative;
+  margin: auto;
+  color: #fff;
+  padding-top: 5px;
 
-.flipped {
-  .card {
-    @include transform(rotateY(180deg));
+  p {
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 600px;
+    margin: auto;
+    padding: 10px;
   }
+
+}
+
+#principles {
+  text-align: center;
+}
+
+#services {
+  .content {
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 600px;
+    margin: auto;
+    padding: 10px;
+    color: white;
+  }
+}
+
+.expand { 
+  width: 800px;
+}
+
+.box.width1 {
+  width: $min-width + $gutter;
 }
 
 .box.width2 {
@@ -152,68 +177,4 @@ $time: cubic-bezier(0.5, 0.9, .8, 1.0);
 
 .box.width3 {
   width: $min-width * 3 + (3 * $gutter);
-}
-
-.blue {
-  background-color: blue;
-  height: 120px;
-}
-
-.green {
-  background-color: green;
-  height: 120px;
-}
-.red {
-  background-color: red;
-  height: 120px;
-}
-
-
-/* Ribbon */
-.ribbon {
- font-size: 16px !important;
- /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
-
- width: 50%;
-    
- position: relative;
- background: #ba89b6;
- color: #fff;
- text-align: center;
- padding: 1em 2em; /* Adjust to suit */
- margin: 2em auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
-}
-.ribbon:before, .ribbon:after {
- content: "";
- position: absolute;
- display: block;
- bottom: -1em;
- border: 1.5em solid #986794;
- z-index: -1;
-}
-.ribbon:before {
- left: -2em;
- border-right-width: 1.5em;
- border-left-color: transparent;
-}
-.ribbon:after {
- right: -2em;
- border-left-width: 1.5em;
- border-right-color: transparent;
-}
-.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
- content: "";
- position: absolute;
- display: block;
- border-style: solid;
- border-color: #804f7c transparent transparent transparent;
- bottom: -1em;
-}
-.ribbon .ribbon-content:before {
- left: 0;
- border-width: 1em 0 0 1em;
-}
-.ribbon .ribbon-content:after {
- right: 0;
- border-width: 1em 1em 0 0;
 }

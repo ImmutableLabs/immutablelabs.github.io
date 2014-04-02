@@ -2,6 +2,7 @@
   (:require [immutable-labs.views.intro :as intro]
             [immutable-labs.views.about :as about]
             [immutable-labs.views.menu :as menu]
+            [immutable-labs.shim :as shim]
             [dommy.core :as dommy])
   (:use-macros [dommy.macros :only [sel1 node]]))
 
@@ -13,4 +14,3 @@
   (.init (js/Headroom. e (js-obj "tolerance" 50 "offset" 180))))
 (dommy/append! (sel1 :body) (intro/render))
 (dommy/append! (sel1 :body) (about/render))
-(about/flippable!)

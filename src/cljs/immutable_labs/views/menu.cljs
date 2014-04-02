@@ -5,7 +5,7 @@
     [dommy.macros :only [node deftemplate]]))
 
 (enable-console-print!)
-(def categories ["About" "Services" "Hire Us"])
+(def categories ["About" "Principles" "Blog" "Hire Us"])
 (defn rotate! [cube x y]
   (set! (.-x (.-rotation cube)) x)
   (set! (.-y (.-rotation cube)) y))
@@ -26,7 +26,7 @@
 (deftemplate logo [colors]
   (let [zip #(map vector % %2)]
     [:#logo 
-     "hey"
+     [:img {:src "assets/imgs/logo.svg"}]
      [:h1 "Immutable" " " 
       [:span.rainbow-word (for [[letter] "Labs" ]
                             [:span letter])]] ]))
@@ -36,10 +36,12 @@
    (logo colors)
    [:#nav-menu
     (for [category categories]
-      (if (= category "Hire us")
-        [:div 
-         [:a {:href "mailto:nicholasbardy@gmail.com"}]
-         category]
-        [:div
+      [:div
+       (case category 
+         "Hire Us" 
+         [:a {:href "mailto:nicholasbardy@gmail.com"}
+          category]
+         "Blog" 
+         [:a {:href "blog.html"} category]
          [:a ^:attrs {:href (str "#" (lower-case category))}
-          category]]))]])
+          category])])]])

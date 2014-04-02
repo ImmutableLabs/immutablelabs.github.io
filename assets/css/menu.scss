@@ -4,7 +4,7 @@ $logo-font-size: 32px;
 $text-color: white;
 
 #menu {
-  box-shadow: 0px 2px 4px rgba(9,6,6,0.56);
+  box-shadow: 0px -1px 4px rgba(9,6,6,0.56);
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -21,6 +21,13 @@ $text-color: white;
     display: inline-block;
   }
 
+  #logo {
+    img {
+      width: 30px;
+      margin: 0px 6px 0px 6px;
+    }
+  }
+
   &.headroom--unpinned {
     @include transform(perspective(300px) rotate3D(1,0,0,-90deg));
   }
@@ -32,7 +39,6 @@ $text-color: white;
   top: 0;
   right: 0;
   padding-top: 10px;
-  padding-right: 5px;
   text-align: right;
   color: $text-color;
   text-shadow: 0px 0px $text-color;
@@ -56,7 +62,6 @@ $text-color: white;
 
 #logo {
   padding-top: 5px;
-  padding-left: 10px;
 
   canvas {
     float: left
