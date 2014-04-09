@@ -32,7 +32,6 @@ $size: 45px;
   }
 
   .title {
-    text-align: right;
     font-size: 24px;
     font-weight: normal;
     color: white;
@@ -50,7 +49,10 @@ $size: 45px;
   }
 
   h4.title {
-    background-color: $red;
+    border-bottom: 2px outset $red;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-bottom: 5px;
   }
 }
 
@@ -160,6 +162,10 @@ $pad: 10px;
     margin: auto;
     padding: 10px;
     color: white;
+
+    ul {
+      padding-left: 0px;
+    }
   }
 }
 

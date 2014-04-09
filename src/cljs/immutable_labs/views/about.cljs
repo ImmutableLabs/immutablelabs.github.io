@@ -49,12 +49,13 @@
 (defn render []
   [:#about
    [:#who
-    [:h4.title "Who we are"]
-      [:p "Immutable Labs is a software development consultancy. We specialize in creating front-end software for mobile and the web. We hold a strong focus on user experience through carefully crafted and well tested user interface designs. We specialize in Clojure and Clojurescript devopment. However our team is comfortable across many languages, platforms and libraries."]
+    [:p 
+     [:h4.title "Who we are"]
+     "Immutable Labs is a software development consultancy. We specialize in creating front-end software for mobile and the web. We hold a strong focus on user experience through carefully crafted and well tested user interface designs. We specialize in Clojure and Clojurescript devopment. However our team is comfortable across many languages, platforms and libraries."]
        [:.clear]]
    [:#principles
-    [:h4.title header-text]
     [:.boxs
+     [:h4.title header-text]
      [:.box.width2 
       (card {:class "usability"}
             ux-title ux-summary ux-img ux-body)]
@@ -66,8 +67,8 @@
             compat-title compat-summary compat-img compat-body)]
      [:.clear]]]
    [:#services
-    [:h4.title "What we do"]
     [:.content
+      [:h4.title "What we do"]
       (apply vector :ul
        (for [service services] [:li service]))]]])
 

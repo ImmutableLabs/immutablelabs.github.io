@@ -95,7 +95,6 @@ h1, h2, h3, h4 {
     #about .info-card .title {
       color: black; }
   #about .title {
-    text-align: right;
     font-size: 24px;
     font-weight: normal;
     color: white;
@@ -110,7 +109,10 @@ h1, h2, h3, h4 {
         text-align: center;
         width: 100%; } }
   #about h4.title {
-    background-color: #df3f2f; }
+    border-bottom: 2px outset #df3f2f;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-bottom: 5px; }
 
 .boxs {
   padding-top: 10px;
@@ -185,6 +187,8 @@ h1, h2, h3, h4 {
   margin: auto;
   padding: 10px;
   color: white; }
+  #services .content ul {
+    padding-left: 0px; }
 
 .expand {
   width: 800px; }
