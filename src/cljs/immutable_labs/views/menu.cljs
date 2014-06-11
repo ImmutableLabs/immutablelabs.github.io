@@ -42,6 +42,6 @@
          [:a {:href "mailto:nicholasbardy@gmail.com"}
           category]
          "Blog" 
-         [:a {:href "blog.html"} category]
+         [:a {:href "#/blog"} category]
          [:a ^:attrs {:href (str "#" (lower-case category))}
           category])])]])

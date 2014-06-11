@@ -40,9 +40,9 @@ $size: 45px;
     width: 40%;
     min-width: 400px;
 
-    @media (max-width: 500px) {
-      text-align: center;
-      width: 100%;
+    @media (max-width: 550px) {
+      width: 75%;
+      min-width: 0px;
     }
     left: 0;
     position: relative;
@@ -52,7 +52,7 @@ $size: 45px;
     border-bottom: 2px outset $red;
     padding-bottom: 0;
     padding-left: 0;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
 }
 
@@ -145,27 +145,30 @@ $pad: 10px;
     box-sizing: border-box;
     max-width: 600px;
     margin: auto;
-    padding: 10px;
+    padding: 0;
   }
 
 }
 
 #principles {
+  .card {
   text-align: center;
+  }
+}
+
+.content {
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 600px;
+  margin: auto;
+  color: white;
+  padding: 20px
 }
 
 #services {
-  .content {
-    width: 100%;
-    box-sizing: border-box;
-    max-width: 600px;
-    margin: auto;
-    padding: 10px;
-    color: white;
-
-    ul {
-      padding-left: 0px;
-    }
+  ul {
+    margin-top: 0;
+    padding-left: 0px;
   }
 }
 

@@ -4,6 +4,7 @@
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [hiccup "1.0.5"]
                  [me.raynes/fs "1.4.4"]
+                 [secretary "1.1.0"]
                  [org.clojure/core.async "0.1.267.0-0d7780-alpha"]
                  [org.clojure/clojurescript "0.0-2173"]]
 
@@ -33,7 +34,8 @@
                         :source-paths ["src/cljs"]
                         :compiler {
                                    :output-to "production.js"
-                                   :externs [ "src/js/lib/headroom.js"]
+                                   :pretty-print :false
+                                   :externs [ "src/js/lib/headroom2.js"]
                                    :optimizations :advanced}}
 
                        {:id "test"

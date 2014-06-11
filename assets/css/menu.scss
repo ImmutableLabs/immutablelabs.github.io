@@ -11,7 +11,6 @@ $text-color: white;
   background-color: $background-color;
   display: inline;
   overflow: hidden;
-  height: 47px;
   @include transform(perspective(1000px) rotateX(0deg));
   @include transition(0.6s all);
   @include transform-origin(center top);
@@ -33,7 +32,6 @@ $text-color: white;
   }
 }
 
-
 #nav-menu {
   position: absolute;
   top: 0;
@@ -43,9 +41,6 @@ $text-color: white;
   color: $text-color;
   text-shadow: 0px 0px $text-color;
 
-  @media screen and (max-width: $break-small) {
-    font-size: 12px;
-  }
 
   font-family: 'Open Sans Light';
 
@@ -59,6 +54,7 @@ $text-color: white;
     color: $text-color;
   }
 }
+
 
 #logo {
   padding-top: 5px;
@@ -76,10 +72,6 @@ $text-color: white;
     color: white;
     display: inline;
 
-    @media screen and (max-width: $break-small) {
-      font-size: 20px;
-    }
-
     .rainbow-word :nth-child(1) {
       color: $yellow;
     }
@@ -94,5 +86,25 @@ $text-color: white;
       color: $purple;
     }
 
+  }
+}
+
+
+@media screen and (max-width: 550px) {
+  #menu {
+    text-align: center;
+    #logo  {
+      h1 {
+        font-size: 30px;
+      }
+      img {
+        margin-left: 0px;
+      }
+    }
+    #nav-menu {
+      position: initial;
+      padding-bottom: 10px;
+      padding-top: 0;
+    }
   }
 }

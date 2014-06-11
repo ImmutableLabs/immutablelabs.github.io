@@ -39,9 +39,9 @@ h1, h2, h3, h4 {
     width: 100%;
     text-align: center;
     color: #1a1a1a; }
-    @media screen and (max-width: 500px) {
-      #intro h1 {
-        font-size: 16px; } }
+    @media screen and (max-width: 580px) {
+      #intro h1 #intro h1 {
+        padding: 15px; } }
 
 @font-face {
   font-family: 'Exo Light';
@@ -104,15 +104,15 @@ h1, h2, h3, h4 {
     min-width: 400px;
     left: 0;
     position: relative; }
-    @media (max-width: 500px) {
+    @media (max-width: 550px) {
       #about .title {
-        text-align: center;
-        width: 100%; } }
+        width: 75%;
+        min-width: 0px; } }
   #about h4.title {
     border-bottom: 2px outset #df3f2f;
     padding-bottom: 0;
     padding-left: 0;
-    margin-bottom: 5px; }
+    margin-bottom: 15px; }
 
 .boxs {
   padding-top: 10px;
@@ -175,20 +175,22 @@ h1, h2, h3, h4 {
     box-sizing: border-box;
     max-width: 600px;
     margin: auto;
-    padding: 10px; }
+    padding: 0; }
 
-#principles {
+#principles .card {
   text-align: center; }
 
-#services .content {
+.content {
   width: 100%;
   box-sizing: border-box;
   max-width: 600px;
   margin: auto;
-  padding: 10px;
-  color: white; }
-  #services .content ul {
-    padding-left: 0px; }
+  color: white;
+  padding: 20px; }
+
+#services ul {
+  margin-top: 0;
+  padding-left: 0px; }
 
 .expand {
   width: 800px; }
@@ -210,7 +212,6 @@ h1, h2, h3, h4 {
   background-color: #333333;
   display: inline;
   overflow: hidden;
-  height: 47px;
   -webkit-transform: perspective(1000px) rotateX(0deg);
   -moz-transform: perspective(1000px) rotateX(0deg);
   -ms-transform: perspective(1000px) rotateX(0deg);
@@ -250,9 +251,6 @@ h1, h2, h3, h4 {
   color: white;
   text-shadow: 0px 0px white;
   font-family: 'Open Sans Light'; }
-  @media screen and (max-width: 500px) {
-    #nav-menu {
-      font-size: 12px; } }
   #nav-menu div {
     display: inline;
     margin: 5px; }
@@ -272,9 +270,6 @@ h1, h2, h3, h4 {
     font-family: 'Exo light';
     color: white;
     display: inline; }
-    @media screen and (max-width: 500px) {
-      #logo h1 {
-        font-size: 20px; } }
     #logo h1 .rainbow-word :nth-child(1) {
       color: #e0c70b; }
     #logo h1 .rainbow-word :nth-child(2) {
@@ -283,3 +278,15 @@ h1, h2, h3, h4 {
       color: #05b44f; }
     #logo h1 .rainbow-word :nth-child(4) {
       color: #8c35cf; }
+
+@media screen and (max-width: 550px) {
+  #menu {
+    text-align: center; }
+    #menu #logo h1 {
+      font-size: 30px; }
+    #menu #logo img {
+      margin-left: 0px; }
+    #menu #nav-menu {
+      position: initial;
+      padding-bottom: 10px;
+      padding-top: 0; } }

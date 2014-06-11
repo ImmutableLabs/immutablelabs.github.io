@@ -11,7 +11,7 @@
 (def header-text "Principles")
 
 (def ux-title "Usability")
-(def ux-summary "Keep it simple")
+(def ux-summary "Simplicity")
 (def ux-body "We immediaely focus on delivering a clean User experience. From the layout the the color scheme, we make sure every details assists in delivering high ease of use.")
 (def ux-img "./assets/imgs/icon_9428.svg")
 
@@ -48,14 +48,8 @@
 
 (defn render []
   [:#about
-   [:#who
-    [:p 
-     [:h4.title "Who we are"]
-     "Immutable Labs is a software development consultancy. We specialize in creating front-end software for mobile and the web. We hold a strong focus on user experience through carefully crafted and well tested user interface designs. We specialize in Clojure and Clojurescript devopment. However our team is comfortable across many languages, platforms and libraries."]
-       [:.clear]]
    [:#principles
     [:.boxs
-     [:h4.title header-text]
      [:.box.width2 
       (card {:class "usability"}
             ux-title ux-summary ux-img ux-body)]
@@ -65,6 +59,12 @@
      [:.box.width2
       (card {:class "compatibility"}
             compat-title compat-summary compat-img compat-body)]
+     [:.clear]]]
+   [:#who
+    [:.content
+     [:h4.title "Who we are"]
+     [:p 
+      "Immutable Labs is a software development consultancy. We specialize in creating front-end software for mobile and the web. We hold a strong focus on user experience through carefully crafted and well tested user interface designs. We specialize in Clojure and Clojurescript devopment. However our team is comfortable across many languages, platforms and libraries."]
      [:.clear]]]
    [:#services
     [:.content

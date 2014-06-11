@@ -15,6 +15,7 @@ goog.addDependency("../cljs/core/async/impl/timers.js", ['cljs.core.async.impl.t
 goog.addDependency("../cljs/core/async.js", ['cljs.core.async'], ['cljs.core.async.impl.channels', 'cljs.core.async.impl.dispatch', 'cljs.core', 'cljs.core.async.impl.buffers', 'cljs.core.async.impl.protocols', 'cljs.core.async.impl.ioc_helpers', 'cljs.core.async.impl.timers']);
 goog.addDependency("../immutable_labs/events.js", ['immutable_labs.events'], ['cljs.core', 'cljs.core.async', 'dommy.core']);
 goog.addDependency("../immutable_labs/views/about.js", ['immutable_labs.views.about'], ['cljs.core', 'cljs.core.async', 'immutable_labs.events', 'dommy.core']);
+goog.addDependency("../immutable_labs/blog.js", ['immutable_labs.blog'], ['cljs.core']);
 goog.addDependency("../immutable_labs/shim.js", ['immutable_labs.shim'], ['goog.dom', 'cljs.core', 'clojure.string']);
 goog.addDependency("../immutable_labs/views/intro.js", ['immutable_labs.views.intro'], ['dommy.template', 'cljs.core', 'dommy.core']);
-goog.addDependency("../immutable_labs/core.js", ['immutable_labs.core'], ['immutable_labs.views.about', 'immutable_labs.shim', 'cljs.core', 'immutable_labs.views.intro', 'dommy.core', 'immutable_labs.views.menu']);
+goog.addDependency("../immutable_labs/core.js", ['immutable_labs.core'], ['immutable_labs.views.about', 'immutable_labs.blog', 'immutable_labs.shim', 'cljs.core', 'immutable_labs.views.intro', 'dommy.core', 'immutable_labs.views.menu']);
